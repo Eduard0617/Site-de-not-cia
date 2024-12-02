@@ -1,0 +1,7 @@
+CREATE TABLE `noticia` (
+    `codigo`		int(11) PRIMARY KEY AUTO_INCREMENT,
+    `titulo_noticia`	varchar(32) NOT NULL,
+    `descricao_noticia` varchar(254) NOT NULL,
+    `arquivo` 		varchar(100) NOT NULL,
+    `data` 		datetime NOT NULL
+);
