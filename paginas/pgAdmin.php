@@ -20,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id_noticia'])) {
       $stmt->bind_param("i", $id_noticia);
       $stmt->execute();
 
-      echo "<h2>Notícia aprovada com sucesso!</h2>";
+      echo "<script>alert('Notícia Aprovada com Sucesso!');</script>";
     } catch (Exception $e) {
-      echo "<h1>Erro ao aprovar a notícia!</h1>";
+      echo "<script>alert('Erro ao aprovar Notícia');</script>";
     }
   } elseif ($status == 'rejeitada') {
     // Deleta a notícia
@@ -32,9 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id_noticia'])) {
       $stmt->bind_param("i", $id_noticia);
       $stmt->execute();
 
-      echo "<h2>Notícia rejeitada e removida com sucesso!</h2>";
+      echo "<script>alert('Notícia Rejeitada e Removida com Sucesso!.');</script>";
     } catch (Exception $e) {
-      echo "<h1>Erro ao excluir a notícia!</h1>";
+      echo "<script>alert('Erro ao excluir notícia.');</script>";
     }
   }
 }
@@ -59,8 +59,8 @@ $result = mysqli_query($mysqli, $query);
 
   <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="#" style="margin-left: 5px">Administracao</a>
-      <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Noticias Pendentes</h1>
+      <a class="navbar-brand" href="#" style="margin-left: 5px">Administração</a>
+      <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Notícias Pendentes</h1>
       <button class="btn btn-secondary btn-sm" style="background-color: white; color: black; margin-right: 5px;"
         onclick="window.location.href='../index.php'">Pagina Principal</button>
       <button class="btn btn-secondary btn-sm" style="background-color: white; color: black"

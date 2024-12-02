@@ -1,7 +1,7 @@
 <?php
     include("../conexao.php");
 
-    $query = "SELECT titulo_noticia, descricao_noticia, arquivo FROM noticia"; // Certifique-se de que 'arquivo' está sendo buscado
+    $query = "SELECT titulo_noticia, descricao_noticia, arquivo FROM noticia WHERE status = 'aprovada'"; // Certifique-se de que 'arquivo' está sendo buscado
     $result = mysqli_query($mysqli, $query);
 ?>
 
@@ -32,7 +32,7 @@
   <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <a class="navbar-brand" href="#" style="margin-left: 5px">Visitante</a>
-      <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Noticias</h1>
+      <h1 class="navbar-brand mx-auto" style="font-size: 35px;">NOTÍCIAS</h1>
       <button class="btn btn-secondary btn-sm" style="background-color: white; color: black"
         onclick="window.location.href='../logout.php'">Sair</button>
     </div>

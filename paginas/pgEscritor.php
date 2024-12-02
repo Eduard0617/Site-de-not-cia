@@ -36,7 +36,7 @@ $result_noticias = mysqli_query($mysqli, $query_noticias);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../admin/admin.css">
+    <link rel="stylesheet" href="../styles/visitante.css">
     </head>
 
 <body>
