@@ -2,29 +2,25 @@
 include('../conexao.php');
 session_start();
 
-// Verifica se o e-mail está armazenado na sessão
 if (!isset($_SESSION['email'])) {
     echo "Você precisa estar logado para acessar esta página.";
-    header("refresh:3; ../index.php"); // Redireciona para a página inicial após 3 segundos
+    header("refresh:3; ../index.php");
     exit();
 }
 
-// Busca o e-mail da sessão
 $email_sessao = $_SESSION['email'];
 
-// Verifica se o e-mail da sessão está presente na base de dados
 $query_login = "SELECT email FROM login WHERE email = '$email_sessao'";
 $result_login = mysqli_query($mysqli, $query_login);
 
-// Verifica se o e-mail foi encontrado no banco de dados
 if (mysqli_num_rows($result_login) == 0) {
     echo "Você precisa estar logado para acessar esta página.";
-    header("refresh:3; ../index.php"); // Redireciona para a página inicial após 3 segundos
+    header("refresh:3; ../index.php"); 
     exit();
 }
 
 // Consulta para pegar as notícias
-$query_noticias = "SELECT titulo_noticia, descricao_noticia, arquivo FROM noticia";
+$query_noticias = "SELECT titulo_noticia, descricao_noticia, arquivo FROM noticia WHERE status ='aprovada'";
 $result_noticias = mysqli_query($mysqli, $query_noticias);
 ?>
 
@@ -36,17 +32,17 @@ $result_noticias = mysqli_query($mysqli, $query_noticias);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escritor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/visitante.css">
+    <link rel="stylesheet" href="../styles/escritor.css">
     </head>
 
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
         <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="#" style="margin-left: 5px">Escritor</a>
+            <a class="navbar-brand custom-escritor" href="#" style="margin-left: 5px">Página do Escritor</a>
             <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Noticias</h1>
-            <button class="btn btn-secondary btn-sm" style="background-color: white; color: black; margin-right: 5px;"
+            <button class="btn btn-secondary btn-sm custom-criar" style="background-color: white; color: black; margin-right: 5px;"
                 onclick="window.location.href='inserindoNoticia.php'">Criar Noticia</button>
-            <button class="btn btn-secondary btn-sm" style="background-color: white; color: black"
+            <button class="btn btn-secondary btn-sm custom-criar" style="background-color: white; color: black"
                 onclick="window.location.href='../logout.php'">Sair</button>
         </div>
     </nav>

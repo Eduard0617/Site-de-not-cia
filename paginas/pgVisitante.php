@@ -31,10 +31,10 @@
 <body>
   <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="#" style="margin-left: 5px">Visitante</a>
+      <a class="navbar-brand custom-nav" href="#" style="margin-left: 5px">Visitante</a>
       <h1 class="navbar-brand mx-auto" style="font-size: 35px;">NOTÍCIAS</h1>
-      <button class="btn btn-secondary btn-sm" style="background-color: white; color: black"
-        onclick="window.location.href='../logout.php'">Sair</button>
+      <button class="btn btn-secondary btn-sm custom-button" style="background-color: white; color: black"
+        onclick="window.location.href='../logout.php'">Cadastrar</button>
     </div>
   </nav>
   

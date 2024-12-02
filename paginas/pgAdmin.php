@@ -59,11 +59,9 @@ $result = mysqli_query($mysqli, $query);
 
   <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="#" style="margin-left: 5px">Administração</a>
+      <a class="navbar-brand custom-nav" href="#" style="margin-left: 5px">Administração</a>
       <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Notícias Pendentes</h1>
-      <button class="btn btn-secondary btn-sm" style="background-color: white; color: black; margin-right: 5px;"
-        onclick="window.location.href='../index.php'">Pagina Principal</button>
-      <button class="btn btn-secondary btn-sm" style="background-color: white; color: black"
+      <button class="btn btn-secondary btn-sm custom-button" style="background-color: white; color: black"
         onclick="window.location.href='../logout.php'">Sair</button>
     </div>
   </nav>

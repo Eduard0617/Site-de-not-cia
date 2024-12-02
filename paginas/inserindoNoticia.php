@@ -34,7 +34,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM noticia");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/visitante.css">
+    <link rel="stylesheet" href="../styles/escritor.css">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,14 +47,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM noticia");
     <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
         <div class="container-fluid">
             <!-- Botão Voltar no canto esquerdo -->
-            <button class="btn btn-secondary btn-sm" style="background-color: white; color: black; margin-left: 5px;"
+            <button class="btn btn-secondary btn-sm custom-button" style="background-color: white; color: black; margin-left: 5px;"
                 onclick="window.location.href='pgEscritor.php'">Voltar</button>
 
             <!-- Título centralizado -->
             <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Criação de Notícia</h1>
 
             <!-- Botão Sair no canto direito -->
-            <button class="btn btn-secondary btn-sm" style="background-color: white; color: black; margin-right: 5px;"
+            <button class="btn btn-secondary btn-sm custom-button" style="background-color: white; color: black; margin-right: 5px;"
                 onclick="window.location.href='../logout.php'">Sair</button>
         </div>
     </nav>
@@ -68,19 +68,18 @@ $result = mysqli_query($mysqli, "SELECT * FROM noticia");
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Título</label>
-                        <input type="text" name="titulo" id="titulo" class="form-control" required />
+                        <input type="text" name="titulo" id="titulo" class="form-control custom-titulo" required />
                     </div>
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descrição</label>
-                        <input type="text" name="descricao" id="descricao" class="form-control" required />
+                        <textarea name="descricao" id="descricao" class="form-control custom-descricao" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="arquivo" class="form-label">Imagem</label>
                         <input type="file" name="arquivo" id="arquivo" class="form-control" required />
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn"
-                            style="background-color: #d31d1d; color: white;">Criar</button>
+                        <button type="submit" class="btn custom-criar" style="background-color: #d31d1d; color: white;">Criar</button>
                     </div>
                 </form>
             </div>
