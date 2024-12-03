@@ -57,14 +57,15 @@ $result = mysqli_query($mysqli, $query);
 
 <body>
 
-  <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navbar-brand custom-nav" href="#" style="margin-left: 5px">Administração</a>
-      <h1 class="navbar-brand mx-auto" style="font-size: 35px;">Notícias Pendentes</h1>
-      <button class="btn btn-secondary btn-sm custom-button" style="background-color: white; color: black"
-        onclick="window.location.href='../logout.php'">Sair</button>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <!-- Alinhar o título no centro -->
+    <a class="navbar-brand" href="#" style="margin-left: 0;">Administração</a>
+    <h1 class="navbar-brand" style="font-size: 35px; margin-left: -2vw;">Notícias Pendentes</h1>
+    <button class="btn btn-secondary btn-sm custom-button" style="background-color: white; color: black" onclick="window.location.href='../logout.php'">Sair</button>
+  </div>
+</nav>
+
 
   <div class="container mt-4">
     <div class="row justify-content-center">
@@ -83,7 +84,8 @@ $result = mysqli_query($mysqli, $query);
           // Exibe a imagem, se houver
           if ($row['arquivo']) {
             echo "<img src='../arquivo/" . htmlspecialchars($row['arquivo']) . "' alt='Imagem da notícia' class='img-fluid' style='max-height: 200px; object-fit: cover; margin-bottom: 15px;'/>";
-          }
+        }
+        
 
           // Formulário com opções de aprovação ou rejeição
           echo "<form method='POST' action='pgAdmin.php' class='d-flex justify-content-center'>";
@@ -103,7 +105,7 @@ $result = mysqli_query($mysqli, $query);
   </div> <!-- Fim da container -->
 
 
-  <footer class="bg text-white text-center py-3" style='margin-top: 30vw; background-color:#d31d1d'>
+  <footer class="bg text-white text-center py-3" style='margin-top: 40vw; background-color:#d31d1d'>
     <p>&copy; 2024 Noticias. Todos os direitos reservados.</p>
   </footer>
 

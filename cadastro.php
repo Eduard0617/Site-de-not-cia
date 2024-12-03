@@ -23,7 +23,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                 echo "<script>
                             alert('Cadastro realizado com sucesso!');
                             setTimeout(function() {
-                                window.location.href = 'index.php';
+                                window.location.href = 'login.php';
                             }, 2000); // Redireciona após 2 segundos
                           </script>";
             } else {

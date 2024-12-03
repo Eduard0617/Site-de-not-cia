@@ -6,8 +6,13 @@
 
 body {
     background-color: #ffffff;
+    height: 100%; 
 }
 
+html, body {
+    height: 100vh;  
+    margin: 0;
+}
 .navbar {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
@@ -32,4 +37,9 @@ h1 {
 
 .custom-nav {
     font-size: 30px;
+}
+
+footer {
+    margin-top: 30vh;
+
 }

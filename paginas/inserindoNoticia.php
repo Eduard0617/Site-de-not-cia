@@ -19,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         mysqli_query($mysqli, "INSERT INTO noticia (titulo_noticia, descricao_noticia, arquivo, data, status) VALUES ('$titulo', '$descricao', '$novoNomeArquivo', NOW(), 'pendente')");
 
-        echo "dados enviados para aprovação";
+        echo "<script> alert('Notícia enviada para aprovação!'); </script>";
     } catch (Exception $e) {
-        echo "<h1>Erro ao cadastrar dados!</h1> <h2>Confira se os dados cadastrados estão corretos</h2>";
+        echo "<script> alert('Erro ao enviar notícia, verifique os dados inseridos'); </script>";
     }
 }
 $result = mysqli_query($mysqli, "SELECT * FROM noticia");

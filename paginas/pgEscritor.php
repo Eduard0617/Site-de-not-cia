@@ -13,11 +13,6 @@ $email_sessao = $_SESSION['email'];
 $query_login = "SELECT email FROM login WHERE email = '$email_sessao'";
 $result_login = mysqli_query($mysqli, $query_login);
 
-if (mysqli_num_rows($result_login) == 0) {
-    echo "Você precisa estar logado para acessar esta página.";
-    header("refresh:3; ../index.php"); 
-    exit();
-}
 
 // Consulta para pegar as notícias
 $query_noticias = "SELECT titulo_noticia, descricao_noticia, arquivo FROM noticia WHERE status ='aprovada'";
@@ -30,7 +25,7 @@ $result_noticias = mysqli_query($mysqli, $query_noticias);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escritor</title>
+    <title>Página do Escritor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/escritor.css">
     </head>
@@ -69,13 +64,13 @@ $result_noticias = mysqli_query($mysqli, $query_noticias);
                     echo "</div>"; // Fim da coluna
                 }
             } else {
-                echo "<p>Não há notícias disponíveis no momento.</p>";
+                echo "<p>Não há notícias aprovadas no momento.</p>";
             }
             ?>
         </div>
     </div>
     
-    <footer class="bg text-white text-center py-3" style="margin-top: 10vw; background-color:#d31d1d">
+    <footer class="bg text-white text-center py-3" style="margin-top: 40vw; background-color:#d31d1d">
     <p>&copy; 2024 Noticias. Todos os direitos reservados.</p>
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

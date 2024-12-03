@@ -51,7 +51,7 @@
 <body>
     <div class="login">
         <h1>Acesse sua conta</h1>
-        <form action="index.php" method="POST">
+        <form action="login.php" method="POST">
             <p>
                 <label style="color: black;">E-mail</label>
                 <input type="text" name="email">
@@ -61,11 +61,12 @@
                 <input type="password" name="senha">
             </p>
             <p>
-                <button type="submit">Entrar</button> <button type="button" onclick="window.location.href='cadastro.php'">Cadastrar</button>
+                <button type="submit">Entrar</button> 
+                <button type="button" onclick="window.location.href='cadastro.php'">Cadastrar</button>
             </p>
         </form>
         <br>
-        <a href="paginas/pgVisitante.php"> Continuar sem cadastro</a>
+        <a href="paginas/index.php"> Continuar sem cadastro</a>
     </div>
 </body>
 </html>
