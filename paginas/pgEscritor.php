@@ -4,7 +4,7 @@ session_start();
 
 if (!isset($_SESSION['email'])) {
     echo "Você precisa estar logado para acessar esta página.";
-    header("refresh:3; ../index.php");
+    header("refresh:3; index.php");
     exit();
 }
 

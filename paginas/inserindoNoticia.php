@@ -1,5 +1,19 @@
 <?php
 include('../conexao.php');
+
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    echo "Você precisa estar logado para acessar esta página.";
+    header("refresh:3; index.php");
+    exit();
+}
+
+$email_sessao = $_SESSION['email'];
+
+$query_login = "SELECT email FROM login WHERE email = '$email_sessao'";
+$result_login = mysqli_query($mysqli, $query_login);
+
 #Insert do título e descrição da notícia
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $titulo = isset($_POST["titulo"]) ? $_POST["titulo"] : "";

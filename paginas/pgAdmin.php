@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['email'] !== 'edufeenandessilva0617@gmail.com') {
   echo "Você não é o Admin";
-  header("refresh:3 ../index.php");
+  header("refresh:3 index.php");
   exit();
 }
 
