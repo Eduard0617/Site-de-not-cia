@@ -25,7 +25,7 @@ $result_noticias = mysqli_query($mysqli, $query_noticias);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página do Escritor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/escritor.css">
+    <link rel="stylesheet" href="../styles/visitante.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg" style="background-color:#d31d1d;">
@@ -45,21 +45,20 @@ $result_noticias = mysqli_query($mysqli, $query_noticias);
                     echo "<div class='col-md-4 mb-4'>"; 
                     echo "<div class='card' style='width: 100%;'>";
                     echo "<div class='card-body'>";
-                    echo "<h5 class='card-title'>" . htmlspecialchars($row['titulo_noticia']) . "</h5>";
-                    echo "<p class='card-text'>" . htmlspecialchars($row['descricao_noticia']) . "</p>";
+
+                    echo "<h5 class='titulo-noticia'>" . htmlspecialchars($row['titulo_noticia']) . "</h5>";
+                    echo "<p class='descricao-noticia'>" . htmlspecialchars($row['descricao_noticia']) . "</p>";
                     
-                    // Exibir imagem se presente
                     if (!empty($row['arquivo'])) {
-                        echo "<img src='../arquivo/" . htmlspecialchars($row['arquivo']) . "' alt='Imagem da notícia' class='img-fluid img-centralizada' />";
+                        echo "<img src='../arquivo/" . htmlspecialchars($row['arquivo']) . "' alt='Imagem da notícia img-centralizada' class='img-fluid img-centralizada' style='max-height: 200px; object-fit: cover; margin-bottom: 15px;' />";
                     }
 
-                    // Link para visualizar mais
                     $id_noticia = $row['id_noticia'];
                     echo "<a href='exibir.php?id_noticia=$id_noticia' class='btn btn-primary'>Ver mais</a>";
 
-                    echo "</div>"; // Fim do card-body
-                    echo "</div>"; // Fim do card
-                    echo "</div>"; // Fim da coluna
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
                 }
             } else {
                 echo "<p>Não há notícias aprovadas no momento.</p>";

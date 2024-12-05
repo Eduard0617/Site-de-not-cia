@@ -37,7 +37,7 @@
                 echo "<p class='descricao-noticia'>" . htmlspecialchars($row['descricao_noticia']) . "</p>";
            
                 if (!empty($row['arquivo'])) {
-                  echo "<img src='../arquivo/" . htmlspecialchars($row['arquivo']) . "' alt='Imagem da notícia img-centralizada' class='img-fluid' style='max-height: 200px; object-fit: cover; margin-bottom: 15px;' />";
+                  echo "<img src='../arquivo/" . htmlspecialchars($row['arquivo']) . "' alt='Imagem da notícia img-centralizada' class='img-fluid img-centralizada' style='max-height: 200px; object-fit: cover; margin-bottom: 15px;' />";
                 }
 
                 $id_noticia = $row['id_noticia'];
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <footer class="bg text-white text-center py-3" style="margin-top: 40vw; background-color:#d31d1d; ">
+  <footer class="bg text-white text-center py-3" style="background-color:#d31d1d;">
     <p>&copy; 2024 Noticias. Todos os direitos reservados.</p>
   </footer>
 </body>
