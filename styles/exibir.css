@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: #d31d1d;
+    width: 100%;
+}
+
+.navbar-brand,
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.custom-button {
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.custom-nav {
+    font-size: 30px;
+}
+
+.titulo-noticia {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d31d1d;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.descricao-noticia {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-custom {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-custom img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #d31d1d;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.img-centralizada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
